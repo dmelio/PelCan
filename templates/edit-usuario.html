@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form action="/update/{{usuario.0}}" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre" value="{{usuario.1}}">  
+    <input type="text" name="telefono" placeholder="telefono" value="{{usuario.2}}">
+    <input type="text" name="email" placeholder="email" value="{{usuario.3}}">
+    <input type="text" name="direccion" placeholder="direccion" value="{{usuario.4}}">
+    <input type="password" readonly="True" name="password" placeholder="password" value="{{usuario.5}}">
+
+    <button type="submit">
+        save
+    </button>
+</form>
+
+{% endblock %}
